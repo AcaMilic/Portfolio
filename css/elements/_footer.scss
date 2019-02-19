@@ -1,0 +1,138 @@
+.navigation-padding {
+    padding-top: 10rem;
+
+    @include respond(phone) {
+        text-align: center;
+        margin-top: -20rem;
+    }
+
+    @include respond(tab-port) {
+        text-align: center;
+        margin-top: -15rem;
+    }
+}
+
+.navigation-footer {
+    padding: 15rem 0;
+    background-image: linear-gradient(to left bottom,
+        rgba($color-black, 0.9),
+        rgba($color-primary-dark, 0.9)), url(../img/backgroundsecond.jpg);
+    transform: skewY(-7deg);
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    overflow: hidden;
+    color: $color-primary;
+
+    &>* {
+        transform: skewY(7deg);
+    }
+
+
+
+    ul {
+        list-style: none;
+        margin-right: 2rem;
+        width: 100%;
+
+        @include respond(phone) {
+            display: block;
+            margin: 0 auto;
+
+        }
+
+        @include respond(tab-port) {
+            display: block;
+            margin: 0 auto;
+        }
+
+        @include respond(tab-land) {
+            display: block;
+            margin-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 1rem;
+            justify-content: flex-start;
+
+            a {
+                color: $color-primary;
+                font-size: 1.6rem;
+                text-decoration: none;
+                transition: all .4s ease-in-out;
+                text-align: left;
+                border-bottom: .2rem solid $color-white;
+                margin-right: 1.5rem;
+
+
+                &:hover {
+                    color: $color-white;
+                    border-bottom: .2rem solid $color-primary;
+                }
+            }
+        }
+    }
+
+    .phone-and-mail {
+        @include respond(phone) {
+            text-align: center;
+
+        }
+
+        @include respond(tab-port) {
+            text-align: center;
+        }
+
+        text-align: left;
+
+        .green {
+            color: $color-primary;
+        }
+
+
+        span {
+            font-size: 1.3rem;
+            color: $color-white;
+
+            a {
+                color: $color-white;
+                text-decoration: underline $color-primary;
+            }
+        }
+
+
+    }
+
+    .copy {
+        h4 {
+            color: $color-primary;
+            font-size: 1.3rem;
+            font-family: 'Courgette', cursive;
+            background-image: linear-gradient(to right,
+                $color-primary,
+                $color-white);
+            -webkit-background-clip: text;
+            color: transparent;
+            letter-spacing: 0.2rem;
+
+
+        }
+    }
+
+    .icons {
+        a {
+            text-decoration: none;
+            color: $color-white;
+            padding: 0 1rem;
+            font-size: 2.6rem;
+            transition: .4s ease-in-out;
+
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
+
+    }
+
+}

@@ -1,0 +1,178 @@
+nav {
+    box-shadow: 0 2px 0 $color-primary;
+    display: flex;
+    width: 100%;
+    margin: 2rem auto;
+
+    .navigation {
+        position: relative;
+        width: 100%;
+
+        .circlegreen {
+            position: absolute;
+            top: 3.7rem;
+            left: 0;
+            width: 2rem;
+            height: 2rem;
+            background: $color-primary;
+            border-radius: 50%;
+            animation: a-ltr-circle-move-left 10s ease-in-out infinite;
+            animation-delay: 3s;
+            opacity: 0;
+
+            @include respond(tab-port) {
+                display: none;
+            }
+        }
+
+        .circlegreentwo {
+            position: absolute;
+            top: 3.7rem;
+            right: 0;
+            width: 2rem;
+            height: 2rem;
+            background: $color-primary;
+            border-radius: 50%;
+            animation: a-ltr-circle-move-right 10s ease-in-out infinite;
+            animation-delay: 3s;
+            opacity: 0;
+
+
+            @include respond(tab-port) {
+                display: none;
+            }
+        }
+
+        .circlegreenthree {
+            position: absolute;
+            @include absCenter;
+            top: 5rem;
+            right: 4rem;
+            width: 2rem;
+            height: 2rem;
+            background: $color-primary;
+            border-radius: 50%;
+            animation: a-ltr-circle-move-down 6s ease-in-out infinite;
+            animation-delay: 10s;
+            opacity: 0;
+
+            @include respond(tab-port) {
+                top: 4rem;
+            }
+        }
+
+        .circlegreentfour {
+            position: absolute;
+            @include absCenter-top-circle-left;
+            top: 5rem;
+            width: 2rem;
+            height: 2rem;
+            background: $color-primary;
+            border-radius: 50%;
+            animation: a-ltr-circle-move-down 9s ease-in-out infinite;
+            animation-delay: 10s;
+            opacity: 0;
+
+            @include respond(tab-port) {
+                top: 4rem;
+            }
+        }
+
+        .circlegreentfive {
+            position: absolute;
+            @include absCenter-top-circle-right;
+            top: 5rem;
+            width: 2rem;
+            height: 2rem;
+            background: $color-primary;
+            border-radius: 50%;
+            animation: a-ltr-circle-move-down 12s ease-in-out infinite;
+            animation-delay: 10s;
+            opacity: 0;
+
+            @include respond(tab-port) {
+                top: 4rem;
+            }
+        }
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+
+        li {
+
+            .left-up-right-down {
+                &:after {
+                    content: "";
+                    position: absolute;
+                    z-index: -1;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &:hover:after {
+                    width: .2rem;
+                    height: 100%;
+                    background: $color-primary;
+                }
+
+                &:hover:before {
+                    width: .2rem;
+                    height: 100%;
+                }
+
+                &:after {
+                    bottom: 0%;
+                    left: 0%;
+                }
+
+                &:before {
+
+                    top: 0%;
+                    right: 0%;
+                }
+
+
+            }
+
+
+        }
+
+
+
+        li a {
+            position: relative;
+            display: block;
+            padding: 1rem 2rem;
+            margin: 0 .5rem auto;
+            font-size: $default-font-size;
+            text-decoration: none;
+            color: $color-grey-light-3;
+            animation: scrolldown 3s ease-in-out backwards;
+            animation-delay: 4s;
+
+            @include respond(tab-port) {
+                padding: 1rem 1.5rem;
+            }
+
+            &:hover {
+                color: $color-white;
+            }
+
+        }
+
+        li {
+
+            a,
+            a:after,
+            a:before {
+                transition: all 1s;
+            }
+        }
+
+    }
+}

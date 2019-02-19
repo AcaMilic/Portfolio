@@ -1,0 +1,116 @@
+#about_me {
+  padding-top: 30rem;
+  padding-bottom: 10rem;
+  margin-top: -18.1rem;
+  background-color: $color-grey-light-2;
+
+
+  // #icon-contrast {
+  //   display: inline-block;
+  //   width: 1em;
+  //   height: 1em;
+  //   stroke-width: 2rem;
+  //   stroke: $color-primary-dark;
+  //   fill: $color-primary;
+  // }
+
+  .content {
+    p {
+      color: $color-primary-dark;
+    }
+  }
+
+  .heading-secondary {
+    @include respond(phone) {
+      margin-top: -1rem;
+      margin-bottom: 1rem;
+    }
+
+  }
+
+  @include respond(tab-land) {
+    margin-top: -19.9rem;
+  }
+
+  p {
+    color: $color-grey-dark-3;
+    font-size: $default-font-size;
+  }
+
+  .skills {
+    h6 {
+      margin-bottom: .7rem;
+      font-size: 1.5rem;
+    }
+
+    .item {
+      background-color: $color-grey-light-2;
+      border-radius: .8rem;
+      padding: .7rem;
+      margin-bottom: 2.6rem;
+    }
+
+    .skills-progress {
+      position: relative;
+      height: 2rem;
+      width: 100%;
+      background-color: $color-white;
+
+      span {
+        height: 100%;
+        width: 5%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: $color-primary;
+        -webkit-transition: all 3s ease-in-out;
+        transition: all 2s ease-in-out;
+
+        &:before {
+          content: attr(data-value);
+          position: absolute;
+          right: -1rem;
+          top: 2rem;
+          background-color: $color-primary-dark;
+          height: 2.6rem;
+          width: 4rem;
+          text-align: center;
+          color: $color-white;
+          line-height: 2.8rem;
+
+        }
+      }
+    }
+  }
+}
+
+
+// Night
+
+.night {
+  transition: all .5s ease-in-out;
+
+  #about_me {
+    transition: all .7s ease-in-out;
+    background-color: $color-primary-dark;
+    color: $color-white;
+
+    .content {
+      p {
+        color: $color-white;
+      }
+    }
+
+    .item {
+      background-color: rgba($color-primary-dark, .4);
+
+    }
+
+    .skills-progress {
+      background-color: rgba($color-primary-dark, .6);
+
+    }
+
+
+  }
+}
